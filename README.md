@@ -1,7 +1,7 @@
 ```
-               #################################################
-                              Welcome to Epacseon               
-               #################################################
+                     #################################################
+                                    Welcome to Epacseon               
+                     #################################################
 ```
 
 ### About
@@ -39,22 +39,34 @@ As you go, try to do the following:
 - Refactor: put common things into reusable functions
 - Can different objects and/or locations go into separate classes (and thus separate files)?
 - Is there something you can use instead of if/else to handle player decisions? (python does not have switch statements, but it does have powerful dictionaries.)
-- Could you [write tests](https://docs.python-guide.org/writing/tests/) for your gameplay? This will not only save you time, but will also help ensure you don't break your code while adding something else, and will keep dead code to a minimum.
+- Try to keep [writing tests](https://docs.python-guide.org/writing/tests/). I have written some using [`pytest`](https://docs.pytest.org/en/latest/) to include the current state of play, obviously change the tests as you change the flow. Testing will save you the time of running through the whole game manually after every change, will help ensure you don't break your code while adding something else, AND will keep dead code to a minimum. (For the basics on testing, see [Intro to TDD](https://github.com/fouralarmfire/square-one/blob/master/tutorials/fizzbuzz-tdd.md#intro-to-test-driven-development-fizzbuzz))
 - Keep the text you print out to 80 characters or less per line. The first computers (which could render text on screen) had space for max 80 characters per line, so it's the number we like to stick with out of habit and for readability.
 
 
 ### Get started!
 
-Fork this repo to your own user area, then clone your fork.
+Fork this repo to your own user area, then clone your fork. Unfamiliar with Git and/or the terminal? [Learn here](https://queenofdowntime.com/resources/tutorials/git).
 
-To run the game:
+I have set this up using [`pipenv`](https://docs.pipenv.org/en/latest/) to manage the environment and dependencies.
+  - Install `pipenv`: `pip3 install pipenv` or `brew install pipenv` (mac only)
+  - Install deps from the existing `Pipfile`: `pipenv install`
+  - To enter the virtual environment: `pipenv shell`
+  - To install new project dependency: `pipenv install <dep>` (`--dev <dep>` for a package just used in tests)
+
+Run the tests:
 ```sh
-$ python3 game.py
-
-# may not work with older python versions... because I was too lazy to make it work
+$ pipenv run pytest
 ```
+
+Play the game:
+```sh
+$ pipenv shell
+(epacseon) bash-3.2$ python play.py
+```
+
+(`exit` to leave the shell).
 
 The game is partially implemented, obviously, to let you take it forward. As it stands you can only make about 4 moves in a circle, and only some of the commands listed in the `rules` have a response.
 
-_Disclaimer: I do not work in or use python day-to-day, I have no idea of what the best practices may be._
+_Disclaimer: I do not work in or use python day-to-day, I have no idea of what the best practices or industry favourite tools for testing or dep management may be._
 _This boilerplate could make a true pythonista faint! Once you wake up, please PR the correct thing!_

@@ -31,7 +31,6 @@ def rules(cont_func):
 
 def quit():
   print("You may yet live to see another day.")
-  exit()
 
 def idk(cont_func):
   print("I don't know what that means...")
@@ -103,5 +102,3 @@ def east_alley():
 def noway(cont_func):
   print("There is nothing in that direction.")
   cont_func()
-
-run_game()
