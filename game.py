@@ -39,9 +39,9 @@ def idk(cont_func):
 def alley_start():
   choice = input("> ")
   if choice.lower() == "n":
-    house()
+    dungeon()
   elif choice.lower() == "north":
-    house()
+    dungeon()
   elif choice.lower() == "s":
     noway(alley_start)
   elif choice.lower() == "south":
@@ -61,8 +61,8 @@ def alley_start():
   else:
     idk(alley_start)
 
-def house():
-  text.house()
+def dungeon():
+  text.dungeon()
   choice = input("> ")
   if choice.lower() == "s":
     play()
@@ -71,12 +71,12 @@ def house():
   elif choice.lower() == "quit":
     quit()
   elif choice.lower() == "rules":
-    rules(house)
+    rules(dungeon)
   else:
-    idk(house)
+    idk(dungeon)
 
-def west_alley():
-  text.west_alley()
+def Room2():
+  text.Room2()
   choice = input("> ")
   if choice.lower() == "e":
     play()
@@ -85,10 +85,10 @@ def west_alley():
   elif choice.lower() == "quit":
     quit()
   elif choice.lower() == "rules":
-    rules(west_alley)
+    rules(Room2)
 
-def east_alley():
-  text.east_alley()
+def Room3():
+  text.Room3()
   choice = input("> ")
   if choice.lower() == "w":
     play()
@@ -97,7 +97,83 @@ def east_alley():
   elif choice.lower() == "quit":
     quit()
   elif choice.lower() == "rules":
-    rules(east_alley)
+    rules(Room3)
+
+#For holding/using/dropping items
+def actions():
+    actions = input("> ")
+    if actions.lower() == "t":
+      dungeon()
+    elif actions.lower() == "take":
+      dungeon()
+
+    if actions.lower() == "u":
+      dungeon()
+    elif choice.lower() == "use":
+      dungeon()
+
+      if actions.lower() == "d":
+        dungeon()
+    elif actions.lower() == "drop":
+        dungeon()
+
+def items():
+    torch.east_alley()
+    if input.actions() == "t":
+        print ("You took the torch.")
+    elif input.actions() ==  "d":
+        print ("You dropped the torch.")
+    elif input.actions() == "u":
+        print ("You used the torch. The room is brighter.")
+
+    mushroom.east_alley()
+    if input.actions() == "t":
+        print ("You took the mushroom.")
+    elif input.actions() ==  "d":
+        print ("You dropped the mushroom.")
+    elif input.actions() == "u":
+        print ("You used the mushroom.")
+
+    key.east_alley()
+    if input.actions() == "t":
+        print ("You took the key.")
+    elif input.actions() ==  "d":
+        print ("You dropped the key.")
+    elif input.actions() == "u":
+        print ("You used the key.")
+
+    ring.east_alley()
+    if input.actions() == "t":
+        print ("You took the ring.")
+    elif input.actions() ==  "d":
+        print ("You dropped the ring.")
+    elif input.actions() == "u":
+        print ("You used the ring.")
+
+    crystal.east_alley()
+    if input.actions() == "t":
+        print ("You took the crystal.")
+    elif input.actions() ==  "d":
+        print ("You dropped the crystal.")
+    elif input.actions() == "u":
+        print ("You used the crystal.")
+
+    berries.east_alley()
+    if input.actions() == "t":
+        print ("You took the berries.")
+    elif input.actions() ==  "d":
+        print ("You dropped the berries.")
+    elif input.actions() == "u":
+        print ("You used the berries.")
+
+    drink.east_alley()
+    if input.actions() == "t":
+        print ("You took the drink.")
+    elif input.actions() ==  "d":
+        print ("You dropped the drink.")
+    elif input.actions() == "u":
+        print ("You used the drink.")
+
 
 def noway(cont_func):
   print("There is nothing in that direction.")
