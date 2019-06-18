@@ -41,6 +41,7 @@ As you go, try to do the following:
 - Is there something you can use instead of if/else to handle player decisions? (python does not have switch statements, but it does have powerful dictionaries.)
 - Try to keep [writing tests](https://docs.python-guide.org/writing/tests/). I have written some using [`pytest`](https://docs.pytest.org/en/latest/) to include the current state of play, obviously change the tests as you change the flow. Testing will save you the time of running through the whole game manually after every change, will help ensure you don't break your code while adding something else, AND will keep dead code to a minimum. (For the basics on testing, see [Intro to TDD](https://github.com/fouralarmfire/square-one/blob/master/tutorials/fizzbuzz-tdd.md#intro-to-test-driven-development-fizzbuzz))
 - Keep the text you print out to 80 characters or less per line. The first computers (which could render text on screen) had space for max 80 characters per line, so it's the number we like to stick with out of habit and for readability.
+- You do **not** need a grid or game-board (unless you want one). Simply restricting a player's movements by only processing some actions is enough.
 
 
 ### Get started!
