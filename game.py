@@ -9,6 +9,8 @@ def start_menu():
     text.welcome()
     start_options()
 
+
+
 def start_options():
   choice = input("> ")
   if choice.lower() == "play":
@@ -20,14 +22,19 @@ def start_options():
   else:
     idk(start_options)
 
+
 def play():
   text.alley()
   alley_start()
+
 
 def rules(cont_func):
     os.system('clear')
     text.rules()
     cont_func()
+
+
+
 
 def quit():
   print("You may yet live to see another day.")
@@ -36,6 +43,10 @@ def idk(cont_func):
   print("I don't know what that means...")
   cont_func()
 
+
+
+
+#This is the first room (2)
 def alley_start():
   choice = input("> ")
   if choice.lower() == "n":
@@ -43,23 +54,27 @@ def alley_start():
   elif choice.lower() == "north":
     dungeon()
   elif choice.lower() == "s":
-    noway(alley_start)
+    Room5()
   elif choice.lower() == "south":
-    noway(alley_start)
+    Room5()
   elif choice.lower() == "w":
-    west_alley()
+    Room2()
   elif choice.lower() == "west":
-    west_alley()
+    Room2()
   elif choice.lower() == "e":
-    east_alley()
+    Room3()
   elif choice.lower() == "east":
-    east_alley()
+    Room3()
   elif choice.lower() == "quit":
     quit()
   elif choice.lower() == "rules":
     rules(play)
   else:
     idk(alley_start)
+
+
+
+
 
 def dungeon():
   text.dungeon()
@@ -75,17 +90,65 @@ def dungeon():
   else:
     idk(dungeon)
 
+
+
+
+
 def Room2():
+
   text.Room2()
   choice = input("> ")
-  if choice.lower() == "e":
-    play()
-  elif choice.lower() == "east":
-    play()
-  elif choice.lower() == "quit":
+if choice.lower() == "e":
+    alley_start()
+elif choice.lower() == "east":
+    alley_start()
+elif choice.lower() == "s":
+    Room4()
+elif choice.lower() == "south":
+    Room4()
+elif choice.lower() == "w":
+    noway()
+elif choice.lower() == "west":
+    noway()
+elif choice.lower() == "n":
+    Room2()
+elif choice.lower() == "north":
+    Room2()
+elif choice.lower() == "quit":
     quit()
-  elif choice.lower() == "rules":
+elif choice.lower() == "rules":
+    rules(play)
+else:
+    idk(Room2)
+
+
+'''
+  text.Room2()
+  choice = input("> ")
+if choice.lower() == "e":
+  dungeon()
+elif choice.lower() == "east":
+  dungeon()
+elif choice.lower() == "n":
+   dungeon()
+elif choice.lower() == "north":
+   dungeon()
+elif choice.lower() == "s":
+    dungeon()
+elif choice.lower() == "south":
+    dungeon()
+elif choice.lower() == "w":
+    play()
+elif choice.lower() == "west":
+    play()
+elif choice.lower() == "quit":
+    quit()
+elif choice.lower() == "rules":
     rules(Room2)
+else:
+    idk(Room2)
+'''
+
 
 def Room3():
   text.Room3()
@@ -98,6 +161,9 @@ def Room3():
     quit()
   elif choice.lower() == "rules":
     rules(Room3)
+
+
+
 
 #For holding/using/dropping items
 def actions():
@@ -116,6 +182,8 @@ def actions():
         dungeon()
     elif actions.lower() == "drop":
         dungeon()
+
+
 
 def items():
     torch.east_alley()

@@ -32,23 +32,71 @@ def rules():
 def alley():
   print("""
   You are standing in a near pitch-black dungeon which
-  disappears into the gloom to the east and west. Which way do you go?
+  disappears into gloom to the east and west. Which way do you go?
   """)
 
 def dungeon():
   print("""
-  The door creaks as you push through. When it closes
-  behind you, the darkness is complete.""")
+  The door is closed behind you you cannot go this way""")
 
 def Room2():
+    # This allows movement for the west + __ option
+    # NO items in this room
   print( """
-  You follow the alley to the west. You feel the ground tilt
-  downhill.
-  The alley stretches before you and back to the east...""")
+  You follow the path to the west. You feel the ground tilt
+  downhill...""")
 
-def east_alley():
+def Room3():
+# This allows movement for the west + __ option
+# Torch can be found here
   print("""
-  You follow the alley to the east. It seems to be getting
-  lighter as you go.
-  The alley stretches before you and back to the west...""")
-            
+  You follow the path to the east and see a bright light in the distance.
+  You head towards the light and find a torch. """)
+
+def Room4():
+    # This allows movement for the west + __ option
+    # There is a mushrom in the room
+    print("""
+    Heading into the next area you come across a mushroom ...""")
+
+def Room5():
+      print("""
+      You follow the path to the east...""")
+
+def Room6():
+    #This allows movement for the west + __ option
+    print("""
+    You follow the path to the east...""")
+
+def Room7():
+    #This allows movement for the west + __ option
+    print("""
+    You follow the path to the east...""")
+
+def Room8():
+    #This allows movement for the west + __ option
+    print("""
+    You follow the path to the east...""")
+
+def Room9():
+    #This allows movement for the west + __ option
+    print("""
+    You follow the path to the east...""")
+
+def Room10():
+    #This allows movement for the __ + __ option
+    #The drink item can be found here
+    print("""
+    You follow the path to the east...""")
+
+def Room11():
+    #This allows movement for the west + __ option
+    #This is the boss room (Need the crystal and the key)
+    print("""
+    You follow the path to the east...""")
+
+def Room12():
+    #This allows movement for the west + __ option
+    #Berries in this room
+    print("""
+    You follow the path to the east...""")
