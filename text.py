@@ -29,74 +29,150 @@ def rules():
 
   #################################################""")
 
-def alley():
+
+
+
+'''
+  if input.actions() =="t":
+      print ("You took the item.")
+'''
+
+def Room2():
+# NO items in this room [Starting room]
   print("""
+  Room2
   You are standing in a near pitch-black dungeon which
-  disappears into gloom to the east and west. Which way do you go?
+  disappears into gloom to the east and west.
+  Find the correct items to escape...
+
+  Which way do you go?
   """)
 
 def dungeon():
   print("""
   The door is closed behind you you cannot go this way""")
 
-def Room2():
-    # This allows movement for the west + __ option
-    # NO items in this room
+def Room1():
   print( """
+  Room1
   You follow the path to the west. You feel the ground tilt
-  downhill...""")
+  downhill into Room 1...""")
 
 def Room3():
-# This allows movement for the west + __ option
-# Torch can be found here
+# A torch can be found here
   print("""
+  Room3
   You follow the path to the east and see a bright light in the distance.
-  You head towards the light and find a torch. """)
+  You head towards the light, into Room 3... """)
+  option = input("Do you want to pick up the torch? Yes/No?")
+
+  if option == "yes" :
+      print("You picked up a torch")
+
+  elif option == "no":
+      print("You left the torch")
+
 
 def Room4():
-    # This allows movement for the west + __ option
     # There is a mushrom in the room
     print("""
-    Heading into the next area you come across a mushroom ...""")
+    Room4
+    Your curiosity leads you to Room 4...""")
+    option = input("Do you want to pick up the crystal?     Yes/No?")
+
+    if option == "yes" :
+        print("You picked up a crystal")
+
+    elif option == "no":
+        print("You left the crystal")
 
 def Room5():
-      print("""
-      You follow the path to the east...""")
+    # There are berries in this room
+    print("""
+    Room5
+    You follow the path into Room 5...""")
+    option = input("Do you want to pick up the berries?     Yes/No?")
+
+    if option == "yes" :
+        print("You picked up a berries")
+
+    elif option == "no":
+        print("You left the berries")
 
 def Room6():
-    #This allows movement for the west + __ option
+    # This room contains a ring
     print("""
-    You follow the path to the east...""")
+    Room6
+    You have now entered Room 6...""")
+    option = input("Do you want to pick up the ring?     Yes/No?")
+
+    if option == "yes" :
+        print("You picked up a ring")
+
+    elif option == "no":
+        print("You left the ring")
 
 def Room7():
-    #This allows movement for the west + __ option
+    #There are no items in this room
     print("""
-    You follow the path to the east...""")
+    Room7
+    Your instincts lead you to Room 7...""")
 
 def Room8():
-    #This allows movement for the west + __ option
+    #There are NO items in this room
     print("""
-    You follow the path to the east...""")
+    Room8
+    Delving depper into the dungeon, you head into Room 8...""")
 
 def Room9():
-    #This allows movement for the west + __ option
+    #There is a mushroom in this room
     print("""
-    You follow the path to the east...""")
+    Room9
+    Beginning to feel lost in this dungeon you wander into Room 9...
+    """)
+    option = input("Do you want to pick up the mushroom?    Yes/No?")
+
+    if option == "yes" :
+        print("You picked up a mushroom")
+
+    elif option == "no":
+        print("You left the mushroom")
+
 
 def Room10():
-    #This allows movement for the __ + __ option
     #The drink item can be found here
-    print("""
-    You follow the path to the east...""")
+    print("""Room10
+    Mysterious noises lead you into Room 10...""")
 
 def Room11():
-    #This allows movement for the west + __ option
-    #This is the boss room (Need the crystal and the key)
+    # Need the crystal and the key to open the room
     print("""
-    You follow the path to the east...""")
+    Room11
+    Desperately searching for a way out, you follow the path into Room 11...""")
 
 def Room12():
-    #This allows movement for the west + __ option
-    #Berries in this room
+    #Room holds a key
     print("""
-    You follow the path to the east...""")
+    Room12
+    You follow the path to Room 12...""")
+
+def Room13():
+        #Final room
+    print("""
+    Room13
+    You win""")
+
+#Inventory class that holds user items.
+'''
+class ClassName(object):
+
+    def __init__(mushroom,crystal):
+        super(, self).__init__()
+        self.arg = arg
+         Inventory
+
+'''
+
+
+def noway():
+    print ("You cannot go this way")
