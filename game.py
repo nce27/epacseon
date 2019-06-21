@@ -335,9 +335,9 @@ def Room11():
  elif choice.lower() == "east":
     Room12()
  elif choice.lower() == "s":
-    noway()
+    Room13()
  elif choice.lower() == "south":
-    noway()
+    Room13()
  elif choice.lower() == "w":
     Room10()
  elif choice.lower() == "west":
